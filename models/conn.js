@@ -1,7 +1,9 @@
-const host = 'kashin.db.elephantsql.com';
-const database = 'omvfqcxu';
-const user = 'omvfqcxu';
-const password = 'MHLXGOrjZwKZDUZtZXfVj-tX1qvSrn8Y';
+require('dotenv').config();
+
+const host = process.env.DB_HOST;
+const database = process.env.DB_NAME;
+const user = process.env.DB_USER;
+const password = process.env.DB_PASSWORD;
 
 const pgp = require('pg-promise')({
     query: function(event) {
